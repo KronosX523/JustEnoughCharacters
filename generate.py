@@ -4,6 +4,7 @@ manual = ['jei1', 'jei2', 'jei3', 'psi']
 suffix = [
     'net.minecraft.client.searchtree.ResourceLocationSearchTree:m_235212_(Ljava/util/List;Ljava/util/function/Function;)Lnet/minecraft/client/searchtree/ResourceLocationSearchTree;',  # Vanilla
     'net.minecraft.client.searchtree.PlainTextSearchTree:m_235197_(Ljava/util/List;Ljava/util/function/Function;)Lnet/minecraft/client/searchtree/PlainTextSearchTree;', # Vanilla
+    'dev.emi.emi.search.EmiSearch:bake()V'
 ]
 contains = [
     'com.blamejared.controlling.client.gui.GuiNewControls:lambda$filterKeys$11(Lcom/blamejared/controlling/client/gui/GuiNewKeyBindingList$KeyEntry;)Z',  # Controlling
@@ -99,6 +100,9 @@ equals = [
     'vazkii.quark.client.module.ChestSearchingModule:namesMatch(Lnet/minecraft/world/item/ItemStack;Ljava/lang/String;)Z',  # Quark legacy
     'vazkii.quark.content.client.module.ChestSearchingModule:namesMatch(Lnet/minecraft/world/item/ItemStack;Ljava/lang/String;)Z',  # Quark
     'org.cyclops.integrateddynamics.core.client.gui.WidgetTextFieldDropdown:lambda$refreshDropdownList$0(Lorg/cyclops/integrateddynamics/core/client/gui/IDropdownEntry;)Z',  # Integrated Dynamics
+    'dev.emi.emi.search.NameQuery:matchesUnbaked(Ldev/emi/emi/api/stack/EmiStack;)Z,'
+    'dev.emi.emi.search.TooltipQuery:matchesUnbaked(Ldev/emi/emi/api/stack/EmiStack;)Z'
+    'com.hollingsworth.arsnouveau.client.container.AbstractStorageTerminalScreen:updateSearch()V', # Ars Nouveau
 ]
 regExp = [
     'appeng.client.gui.me.fluids.FluidRepo:matchesSearch(Lappeng/client/gui/me/common/Repo$SearchMode;Ljava/util/regex/Pattern;Lappeng/api/storage/data/IAEFluidStack;)Z',  # Applied Energistics
@@ -127,7 +131,10 @@ regExp = [
     'appeng.client.gui.me.search.SearchPredicates:lambda$createTooltipPredicate$4(Lappeng/client/gui/me/search/RepoSearch;Ljava/util/regex/Pattern;Lappeng/menu/me/common/GridInventoryEntry;)Z',
     'appeng.client.gui.me.search.SearchPredicates:lambda$createNamePredicate$3(Ljava/util/regex/Pattern;Lappeng/menu/me/common/GridInventoryEntry;)Z', #since Applied Energistics 2-12.9.5
     'appeng.client.gui.me.search.SearchPredicates:lambda$createTooltipPredicate$4(Lappeng/client/gui/me/search/RepoSearch;Ljava/util/regex/Pattern;Lappeng/menu/me/common/GridInventoryEntry;)Z' #since Applied Energistics 2-12.9.5
-
+    'dev.emi.emi.search.RegexTooltipQuery:matches(Ldev/emi/emi/api/stack/EmiStack;)Z'
+    'dev.emi.emi.search.RegexNameQuery:matches(Ldev/emi/emi/api/stack/EmiStack;)Z'
+    'appeng.client.gui.me.search.SearchPredicates:lambda$createTooltipPredicate$4(Lappeng/client/gui/me/search/RepoSearch;Ljava/util/regex/Pattern;Lappeng/menu/me/common/GridInventoryEntry;)Z', #since Applied Energistics 2-12.9.5
+    'com.hollingsworth.arsnouveau.client.container.AbstractStorageTerminalScreen:updateSearch()V', # Ars Nouveau
 ]
 
 pattern = """// Generated
